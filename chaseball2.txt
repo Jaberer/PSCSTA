@@ -1,0 +1,30 @@
+int size = scn.nextInt();
+            for(int line = 1; line <= size; line++)
+            {
+                for(int a = 0; a < size-line; a++)
+                {
+                    System.out.print(" ");
+                }
+                System.out.print("/");
+                for(int b = 0; b < (line-1) * 2; b++)
+                {
+                    System.out.print(" ");
+                }
+                System.out.println("\\");
+            }
+
+            for(int line = 1; line <= size; line++)
+            {
+                for(int a = 0; a < line - 1; a++)
+                {
+                    System.out.print(" ");
+                }
+                System.out.print("\\");
+                for(int b = 0; b < (size-line) * 2; b++)
+                {
+                    System.out.print(" ");
+                }
+                System.out.print("/");
+                System.out.println();
+            }
+            System.out.println("");

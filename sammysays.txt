@@ -1,0 +1,16 @@
+String sentence = "";
+            Scanner Tokenizer = new Scanner(scn.nextLine());
+            String first = Tokenizer.next();
+            String second = Tokenizer.next();
+            if(first.equals("Sammy") && second.equals("says"))
+            {
+                while(Tokenizer.hasNext())
+                {
+                    String word = Tokenizer.next();
+                    sentence += word + " ";
+                }
+            }
+            if(!sentence.equals(""))
+            {
+            System.out.println(sentence);
+            }

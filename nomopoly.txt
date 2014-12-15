@@ -1,0 +1,12 @@
+String name = scn.nextLine();
+            //System.out.println(name);
+            double simpcost= Double.parseDouble(scn.nextLine().replace("$", "").replace(".00", ""));
+            //System.out.println(simpcost);
+            int a = scn.nextInt();
+            for (int i = 0; i < a; i++ ){
+                simpcost*=2.25;
+            }
+            System.out.printf("If someone lands on %s, they will owe me $%d\n", name, (int) simpcost);
+            if(scn.hasNext()){
+            scn.nextLine();
+            }

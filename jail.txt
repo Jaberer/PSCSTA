@@ -1,0 +1,38 @@
+for (int j = 0; j < times; j++)
+        {
+            int num = scn.nextInt();
+            ArrayList<String> free = new ArrayList<String>();
+            ArrayList<String[]> jail = new ArrayList<String[]>();
+            boolean invalid = true;
+            for (int i = 0; i < num; i++){
+                String p1 = scn.next();
+                scn.next();
+                String p2 = scn.next();
+                if (jail.contains(p1) || jail.contains(p2)){
+                    //System.out.println("INVALID GAME\n");
+                    invalid = false;
+
+
+                }
+                if (free.contains(p2)){
+                    free.remove(p2);
+                }
+                String[] tactic = {p2, p1};
+                jail.add(tactic);
+                if (!free.contains(p1)){
+                    free.add(p1);
+                }
+                for (String[] : jail){
+                    
+                }
+            }
+            if(invalid){
+                System.out.println("INVALID GAME\n");
+            }else if (free.size() == 1){
+                System.out.println("VALID GAME");
+                System.out.println("Winner: " + free.get(0) + "\n");
+            } else {
+                System.out.println("VALID GAME");
+                System.out.println("Unfinished\n");
+            }
+        }
